@@ -1,0 +1,94 @@
+:root{
+	--bg:#0b0a10;
+	--panel:#0f0d16;
+	--card:#14101a;
+	--muted:#9a8fb3;
+	--accent:#d68bff;
+	--accent-2:#7c5cff;
+	--glass: rgba(255,255,255,0.03);
+	--radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#07060b 0%, #0b0a10 100%);color:#eee}
+.app{max-width:1100px;margin:28px auto;padding:20px}
+
+/* Top bar */
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.brand{font-weight:700;font-size:20px;color:var(--accent-2);text-decoration:none}
+.nav{display:flex;gap:12px}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
+.nav a:hover{background:var(--glass);color:#fff}
+
+/* Card / Feed */
+.feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.feed .post{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column}
+.post .meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.post strong{color:var(--accent)}
+.post p{color:var(--muted);margin:6px 0 0}
+
+.post-image img{width:100%;height:240px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+
+.carousel-controls{position:absolute;left:0;right:0;top:50%;display:flex;justify-content:space-between;padding:0 8px}
+.post-image{position:relative}
+.carousel-controls .btn{opacity:0.9}
+
+.post-image .dots{position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px}
+.post-image .dots button{background:transparent;border:none;color:rgba(255,255,255,0.5);font-size:18px}
+.post-image .dots button.active{color:var(--accent-2)}
+.post-image .img-count{position:absolute;right:8px;top:8px;background:rgba(0,0,0,0.4);padding:6px 8px;border-radius:999px;color:var(--muted);font-size:12px}
+
+.preview-grid{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.preview-item{width:120px;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.preview-item img{width:100%;height:64px;object-fit:cover}
+.preview-item .btn{margin:6px;padding:6px;font-size:12px}
+.progress{height:8px;background:rgba(255,255,255,0.03);border-radius:8px;margin-top:8px}
+.progress .bar{height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));border-radius:8px}
+
+/* Forms & inputs */
+.form input,.form textarea{width:100%;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#eee;margin-top:8px}
+.form textarea{min-height:120px}
+.btn{background:linear-gradient(90deg,var(--accent-2),var(--accent));border:none;color:#111;padding:10px 14px;border-radius:12px;cursor:pointer}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+/* Modal (centered) */
+.modal-backdrop{position:fixed;inset:0;background:linear-gradient(180deg,rgba(3,2,6,0.6),rgba(3,2,6,0.9));display:flex;align-items:center;justify-content:center;padding:20px}
+.modal{width:420px;max-width:95%;background:linear-gradient(180deg,#141018,#0f0b13);border-radius:18px;padding:18px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 40px rgba(0,0,0,0.6)}
+.modal h3{margin:0 0 10px;text-align:center}
+.modal .option{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:12px;margin-bottom:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02)}
+.badge{background:linear-gradient(90deg,#3b2a57,#5a3d7f);padding:6px 8px;border-radius:10px;color:#fff;font-size:13px}
+
+/* small tweaks */
+.tiny{font-size:12px;color:var(--muted)}
+
+@media (max-width:600px){.modal{width:96%}}
+
+/* Hero / Featured */
+.hero{background:linear-gradient(180deg, rgba(124,92,255,0.06), rgba(214,139,255,0.02));border-radius:14px;padding:20px;margin-bottom:18px;border:1px solid rgba(124,92,255,0.06);position:relative;overflow:hidden}
+.hero .label{display:inline-flex;align-items:center;gap:8px;color:var(--accent-2);font-weight:600;margin-bottom:8px}
+.hero .quote{color:rgba(255,255,255,0.9);font-size:16px;line-height:1.4}
+.hero .cta{margin-top:12px;display:inline-block}
+
+.featured-header{display:flex;align-items:center;gap:10px;margin:8px 0 12px;color:var(--muted)}
+.featured-header .icon{color:var(--accent-2);font-size:18px}
+
+.featured-card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:20px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:10px}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#ff9ad0,#c57cff);color:#fff;font-size:13px}
+.meta-row{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}
+
+/* Bottom navigation */
+.bottom-nav{position:fixed;left:0;right:0;bottom:12px;margin:auto;max-width:720px;height:68px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:22px;display:flex;justify-content:space-around;align-items:center;padding:8px 18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 12px 40px rgba(2,1,6,0.6)}
+.bottom-nav a{color:var(--muted);text-decoration:none;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.bottom-nav a.active{color:var(--accent-2);background:radial-gradient(circle at center, rgba(124,92,255,0.14), transparent);padding:10px;border-radius:12px}
+
+/* Toasts */
+.toast-container{position:fixed;right:18px;bottom:96px;display:flex;flex-direction:column;gap:8px;z-index:60}
+.toast{background:linear-gradient(90deg,#26202e,#1a1521);color:#fff;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 30px rgba(0,0,0,0.6);cursor:pointer}
+.toast.info{border-left:4px solid var(--accent-2)}
+.toast.success{border-left:4px solid #4ade80}
+.toast.error{border-left:4px solid #ff6b6b}
+
+/* tiny spinner */
+.spinner{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,0.08);border-top-color:var(--accent-2);animation:spin 0.9s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+
