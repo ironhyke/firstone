@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import { useToast } from '../contexts/ToastContext';
+import { useAuth } from "../contexts/AuthContext";
 import Spinner from '../components/Spinner';
 
 export default function RegisterPage(){
