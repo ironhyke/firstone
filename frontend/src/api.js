@@ -2,7 +2,7 @@ import axios from "axios";
 import { logout } from "./shared/utils/auth";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:5002/api",
+  baseURL: "https://ctrl-alt-elite-6lbt.onrender.com/api",
   timeout: 1000,
 });
 
