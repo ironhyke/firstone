@@ -30,7 +30,7 @@ const postRegister = async (req, res) => {
     const token = jwt.sign(
       {
         userId: user._id,
-        mail,
+        mail:user.mail
       },
       process.env.TOKEN_KEY,
       {
