@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start"
+
+
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "express-joi-validation": "^5.0.0",
     "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^6.20.0",
     "mongoose": "^6.0.10",
     "nodemon": "^2.0.13",
     "socket.io": "^4.4.1",
