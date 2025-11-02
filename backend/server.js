@@ -12,7 +12,11 @@ const PORT = process.env.PORT || process.env.API_PORT;
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: "https://ctrl-alt-elite-o5q5-e5ol78nad-athuls-projects-5c4afe60.vercel.app", // <- your deployed Vercel frontend URL!
+  credentials: true
+}));
 
 // register the routes
 app.use("/api/auth", authRoutes);
