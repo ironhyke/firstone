@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://ctrl-alt-elite-o5q5-e5ol78nad-athuls-projects-5c4afe60.vercel.app", // <- your deployed Vercel frontend URL!
+  origin:  "https://ctrl-alt-elite-o5q5.vercel.app", 
   credentials: true
 }));
 
