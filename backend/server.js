@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://ctrl-alt-elite-o5q5.vercel.app"
+    "https://ctrl-alt-elite-6f2h.vercel.app"
   ],
   credentials: true
 }));
